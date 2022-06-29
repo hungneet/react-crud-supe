@@ -11,6 +11,7 @@ export class Home extends Component {
             SupeName: "",
             SupeSuperpower: "",
             SupeId: 0,
+            SupeWeb: "",
 
             SupeIdFilter: "",
             SupeNameFilter: "",
@@ -77,12 +78,16 @@ export class Home extends Component {
         this.setState({ SupeSuperpower: e.target.value });
     }
 
+    changeSupeWeb = (e) => {
+        this.setState({ SupeWeb: e.target.value });
+    }
     addClick() {
         this.setState({
             modalTitle: "Add Supes",
             SupeId: 0,
             SupeName: "",
-            SupeSuperpower: ""
+            SupeSuperpower: "",
+            SupeWeb: ""
         })
     }
     editClick(Supes) {
@@ -90,7 +95,8 @@ export class Home extends Component {
             modalTitle: "Edit Supes",
             SupeId: Supes.id,
             SupeName: Supes.name,
-            SupeSuperpower: Supes.superpower
+            SupeSuperpower: Supes.superpower,
+            SupeWeb: Supes.websiteUrl
         })
     }
 
@@ -104,7 +110,8 @@ export class Home extends Component {
             },
             body: JSON.stringify({
                 name: this.state.SupeName,
-                superpower: this.state.SupeSuperpower
+                superpower: this.state.SupeSuperpower,
+                websiteUrl: this.state.SupeWeb
             })
         })
             .then(res => res.json())
@@ -126,7 +133,9 @@ export class Home extends Component {
             body: JSON.stringify({
                 id: this.state.SupeId,
                 name: this.state.SupeName,
-                superpower: this.state.SupeSuperpower
+                superpower: this.state.SupeSuperpower,
+                websiteUrl: this.state.SupeWeb
+
             })
         })
             .then(res => res.json())
@@ -162,7 +171,8 @@ export class Home extends Component {
             modalTitle,
             SupeId,
             SupeName,
-            SupeSuperpower } = this.state;
+            SupeSuperpower,
+            SupeWeb } = this.state;
         return (
             <div>
                 <button type="button"
@@ -235,6 +245,15 @@ export class Home extends Component {
                                 <td><b>{Supes.name}</b></td>
                                 <td>{Supes.superpower}</td>
                                 <td>
+                                    <a href={Supes.websiteUrl} target="_blank">
+                                        <button type="button" className="btn btn-light mr-"
+                                        >
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-person-circle" viewBox="0 0 16 16">
+                                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                            </svg>
+                                        </button>
+                                    </a>
                                     <button type="button" className="btn btn-light mr-"
                                         data-bs-toggle="modal"
                                         data-bs-target="#exampleModal"
@@ -251,6 +270,7 @@ export class Home extends Component {
                                             <path fillRule="evenodd" d="M12.146 5.146a.5.5 0 0 1 .708 0L14 6.293l1.146-1.147a.5.5 0 0 1 .708.708L14.707 7l1.147 1.146a.5.5 0 0 1-.708.708L14 7.707l-1.146 1.147a.5.5 0 0 1-.708-.708L13.293 7l-1.147-1.146a.5.5 0 0 1 0-.708z" />
                                         </svg>
                                     </button>
+
                                 </td>
                             </tr>)}
                     </tbody>
@@ -267,16 +287,24 @@ export class Home extends Component {
                                     <span className="input-group-text">Supe Name</span>
                                     <input type="text" className="form-control"
                                         value={SupeName}
-                                        onChange={this.changeSupeName} />
+                                        onChange={this.changeSupeName}
+                                        placeholder="YoeMama" />
                                 </div>
 
                                 <div className="input-group mb-3">
                                     <span className="input-group-text">Supe Superpower</span>
                                     <input type="text" className="form-control"
                                         value={SupeSuperpower}
-                                        onChange={this.changeSupeSuperpower} />
+                                        onChange={this.changeSupeSuperpower}
+                                        placeholder="Nuke Everywhere" />
                                 </div>
-
+                                <div className="input-group mb-3">
+                                    <span className="input-group-text">Supe Website</span>
+                                    <input type="text" className="form-control"
+                                        value={SupeWeb}
+                                        onChange={this.changeSupeWeb}
+                                        placeholder="https://www.facebook.com/joemama/" />
+                                </div>
                                 {SupeId == 0 ?
                                     <button type="button"
                                         className="btn btn-primary float-start"
