@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import {Home} from './Home';
 
@@ -9,9 +9,9 @@ function App() {
   
   return (
     
-    <div className="App-header" >
+    <div className="App-header">
       
-      <h1>
+      <h1 className="title" style={{textAlign: 'center'}}>
       Vought Supes Manager
       </h1>
      

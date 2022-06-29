@@ -13,8 +13,10 @@
   }
 }
 
+
 .App-header {
-  
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: azure;
   width: 100vw;
   height: 100vh;
 }
@@ -22,6 +24,8 @@
 .App-link {
   color: #61dafb;
 }
+
+
 
 @keyframes App-logo-spin {
   from {
