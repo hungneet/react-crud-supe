@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hungneet/SuperHeroAPI.git/static/css/main.7ca34092.css",
+    "main.js": "/hungneet/SuperHeroAPI.git/static/js/main.41fc50f8.js",
+    "static/js/787.2cbe329d.chunk.js": "/hungneet/SuperHeroAPI.git/static/js/787.2cbe329d.chunk.js",
+    "index.html": "/hungneet/SuperHeroAPI.git/index.html",
+    "main.7ca34092.css.map": "/hungneet/SuperHeroAPI.git/static/css/main.7ca34092.css.map",
+    "main.41fc50f8.js.map": "/hungneet/SuperHeroAPI.git/static/js/main.41fc50f8.js.map",
+    "787.2cbe329d.chunk.js.map": "/hungneet/SuperHeroAPI.git/static/js/787.2cbe329d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7ca34092.css",
+    "static/js/main.41fc50f8.js"
+  ]
+}
