@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/hungneet/SuperHeroAPI.git/static/css/main.7ca34092.css",
-    "main.js": "/hungneet/SuperHeroAPI.git/static/js/main.41fc50f8.js",
-    "static/js/787.2cbe329d.chunk.js": "/hungneet/SuperHeroAPI.git/static/js/787.2cbe329d.chunk.js",
-    "index.html": "/hungneet/SuperHeroAPI.git/index.html",
-    "main.7ca34092.css.map": "/hungneet/SuperHeroAPI.git/static/css/main.7ca34092.css.map",
-    "main.41fc50f8.js.map": "/hungneet/SuperHeroAPI.git/static/js/main.41fc50f8.js.map",
-    "787.2cbe329d.chunk.js.map": "/hungneet/SuperHeroAPI.git/static/js/787.2cbe329d.chunk.js.map"
+    "main.css": "/react-crud-supe/static/css/main.7ca34092.css",
+    "main.js": "/react-crud-supe/static/js/main.a97d9db5.js",
+    "static/js/787.2cbe329d.chunk.js": "/react-crud-supe/static/js/787.2cbe329d.chunk.js",
+    "index.html": "/react-crud-supe/index.html",
+    "main.7ca34092.css.map": "/react-crud-supe/static/css/main.7ca34092.css.map",
+    "main.a97d9db5.js.map": "/react-crud-supe/static/js/main.a97d9db5.js.map",
+    "787.2cbe329d.chunk.js.map": "/react-crud-supe/static/js/787.2cbe329d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7ca34092.css",
-    "static/js/main.41fc50f8.js"
+    "static/js/main.a97d9db5.js"
   ]
 }
